@@ -12,6 +12,8 @@ module.exports = {
     coverageDirectory: '<rootDir>/reports/coverage',
     collectCoverageFrom: [
         '**app/components/**/*.js',
+        '**app/containers/**/*.js',
+        '**app/utils/*.js',
         '!**app/components/**/*.mock.js',
         '!**lib/components/**/*.styles.js',
         '!**app/styles/**/*.js',
