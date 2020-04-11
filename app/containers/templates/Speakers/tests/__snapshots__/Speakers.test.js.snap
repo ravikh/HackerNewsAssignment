@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Speakers component should render correctly 1`] = `
+<Speakers
+  speakersData={
+    Array [
+      Object {
+        "name": "test name",
+        "title": "test title",
+      },
+    ]
+  }
+/>
+`;
