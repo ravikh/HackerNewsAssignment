@@ -11,6 +11,7 @@
     "test:watch": "jest — watch",
     "dev": "next",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint:js": "eslint app/",
     "lint:js:fix": "yarn run lint:js --fix",
