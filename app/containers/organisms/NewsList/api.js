@@ -1,7 +1,7 @@
 import fetch from '../../../utils/serviceUtil';
-import {HACKERNEWS_ENDPOINT} from '../../../constants';
+import { HACKERNEWS_ENDPOINT } from '../../../constants';
 
-const getMoreNews = (pageNumber) => {
+const getMoreNews = async pageNumber => {
     return fetch(`${HACKERNEWS_ENDPOINT}?page=${pageNumber}`)
         .then(response => response.data)
         .catch(err => {

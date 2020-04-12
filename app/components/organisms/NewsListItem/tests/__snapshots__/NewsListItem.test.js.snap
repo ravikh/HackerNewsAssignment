@@ -1,45 +1,99 @@
-import React from 'react';
-import timeSince from '../../../utils/timeSince';
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
-const NewsListItem = ({newsItem, hideNewsItem, upVoteNewsItem}) => {
-    const hideThisItem = (e) => {
-        e.preventDefault();
-        hideNewsItem(newsItem);
-    }
-
-    const upVote = (e) => {
-        e.preventDefault();
-        if (!newsItem.upvoted) {
-            upVoteNewsItem(newsItem);
-        }
-    }
-
-    if (newsItem.title && !newsItem.hidden) {
-        return <li key={newsItem.objectID}>
-            <span className={"lgOnly"}>
-                <span className={"commentsCount"}>{newsItem.num_comments}</span>
-                <span className="upVote">
-                    <span className={newsItem.upvoted ? 'upVoted' : ''}>{newsItem.points}</span>
-                    <a href="#" onClick={upVote} className="upVoteIcon">Up</a>
-                </span>
-            </span>
-            
-            <span className="title space">{newsItem.title}</span>
-            <br className="smOnly" />
-            <span className="space">{`(${newsItem.url})`}</span>
-            <br className="smOnly" />
-            <span className="space author">{`by ${newsItem.author}`}</span>
-            <span className="space timeSince">{timeSince(newsItem.created_at)}</span>
-            <br className="smOnly" />
-            <span className={"smOnly"}>
-                <span className={"commentsCount"}>{newsItem.num_comments}</span>
-                <span className="upVote">
-                    <span className={newsItem.upvoted ? 'upVoted' : ''}>{newsItem.points}</span>
-                    <a href="#" onClick={upVote} className="upVoteIcon">Up</a>
-                </span>
-            </span>
-            <a href="#" className="space hideItem" onClick={hideThisItem}>[hide]</a>
-            <style jsx>{`
+exports[`test the news list item component test snapshot 1`] = `
+<li
+  key="15800676"
+>
+  <span
+    className="lgOnly"
+  >
+    <span
+      className="commentsCount"
+    >
+      813
+    </span>
+    <span
+      className="upVote"
+    >
+      <span
+        className=""
+      >
+        3001
+      </span>
+      <a
+        className="upVoteIcon"
+        href="#"
+        onClick={[Function]}
+      >
+        Up
+      </a>
+    </span>
+  </span>
+  <span
+    className="title space"
+  >
+    macOS High Sierra: Anyone can login as “root” with empty password
+  </span>
+  <br
+    className="smOnly"
+  />
+  <span
+    className="space"
+  >
+    (https://twitter.com/lemiorhan/status/935578694541770752)
+  </span>
+  <br
+    className="smOnly"
+  />
+  <span
+    className="space author"
+  >
+    by vladikoff
+  </span>
+  <span
+    className="space timeSince"
+  >
+    2 years ago
+  </span>
+  <br
+    className="smOnly"
+  />
+  <span
+    className="smOnly"
+  >
+    <span
+      className="commentsCount"
+    >
+      813
+    </span>
+    <span
+      className="upVote"
+    >
+      <span
+        className=""
+      >
+        3001
+      </span>
+      <a
+        className="upVoteIcon"
+        href="#"
+        onClick={[Function]}
+      >
+        Up
+      </a>
+    </span>
+  </span>
+  <a
+    className="space hideItem"
+    href="#"
+    onClick={[Function]}
+  >
+    [hide]
+  </a>
+  <style
+    jsx={true}
+  >
+    
                 li {
                     padding: 3px 30px 3px 80px;
                     list-style: none;
@@ -112,10 +166,7 @@ const NewsListItem = ({newsItem, hideNewsItem, upVoteNewsItem}) => {
                         width: 60px;
                     }
                 }
-            `}</style>
-        </li>
-    }
-    return null;
-}
-
-export default NewsListItem;
+            
+  </style>
+</li>
+`;
