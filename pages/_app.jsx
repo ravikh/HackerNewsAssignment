@@ -24,6 +24,16 @@ export default class MyApp extends App {
                     <title>{PAGE_TITLE}</title>
                 </Head>
                 <Component {...pageProps} />
+                
+                <style jsx global>{`
+                    body {
+                        background-color: #fffaf2;
+                        margin: 0;
+                    }
+                    ul {
+                        padding: 0;
+                    }
+                `}</style>
             </>
         )
     }
