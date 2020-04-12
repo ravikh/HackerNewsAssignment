@@ -14,13 +14,17 @@ install:
 scripts:
   - yarn run lint:js
   - yarn run test
+
+before_deploy:
   - yarn run build
   - yarn run export
 
 deploy:
   provider: netlify
-  site: efe2bffb-352f-44eb-b7cc-4c1af8e112ac
-  auth: f3d856ae81c142191055bf4eacb10420d3a8d295d99c13a0583f087fe056f585
+  site: $NETLIFY_SITE_ID 
+  auth: $NETLIFY_ACCESS_TOKEN
   edge: true # opt in to dpl v2
   dir: "out"
+  on:
+    branch: master
 
