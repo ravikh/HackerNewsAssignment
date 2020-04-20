@@ -5,12 +5,13 @@ import Button from '../../atoms/Button';
 import styles from './LoadMore.style';
 
 const LoadMoreButton = ({
-    onClick, children
+    onClick, children, className
 }) => {
     return (
         <Button
             title='Load More'
             onClick={onClick}
+            className={className}
         >{children}</Button>
     )
 }

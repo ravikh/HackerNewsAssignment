@@ -18,7 +18,7 @@ const ListItem = styled.li`
         position: absolute;
         font-size: 16px;
         top: 0.5rem;
-        left: 0.75rem;
+        left: 1.5rem;
       }
       @media ${props.theme.deviceBreakpoints.laptop} { 
         padding: 0.5rem 2rem;

@@ -2,9 +2,8 @@
 import {css} from 'styled-components';
 
 const NewsListStyles = css`
-    .page-heading {
-        padding-left: 1rem;
-    }
+    padding-top: 3rem;
+    
     .news-item-row {
         max-width: 100%;
 

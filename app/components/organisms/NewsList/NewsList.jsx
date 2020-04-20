@@ -26,7 +26,13 @@ const NewsList = ({newsListData, loadMoreNews, upVoteNewsItem, hideNewsItem, cla
                     )
                 })}
             </List>
-            <LoadMore onClick={loadMoreNews}>Load More</LoadMore>
+            
+            <div className="row">
+                <div className="col-lg-offset-2 col-lg-10">
+                    <LoadMore onClick={loadMoreNews}>Load More</LoadMore>
+                </div>
+            </div>
+            
         </div>
     );
 };
