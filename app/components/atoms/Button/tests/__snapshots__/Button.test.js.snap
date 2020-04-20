@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render correctly 1`] = `
+<Button
+  ariaLabel=""
+  className=""
+  disabled={false}
+  hideText={false}
+  isPrimary={true}
+  isSecondary={false}
+  onClick={[Function]}
+  showAsLink={false}
+  theme={
+    Object {
+      "colors": Object {
+        "background": Object {
+          "default": "var(--primary-bg-color)",
+          "errorMessage": "var(--white)",
+          "header": "var(--primary-color)",
+        },
+        "common": Object {
+          "black": "var(--black)",
+          "blue": "var(--blue)",
+          "white": "var(--white)",
+        },
+        "error": Object {
+          "primary": "var(--red)",
+          "secondary": "var(--grey)",
+        },
+        "primary": Object {
+          "dark": "var(--black)",
+          "light": "var(--grey)",
+        },
+        "secondary": Object {
+          "dark": "var(--black)",
+          "light": "var(--grey)",
+        },
+        "text": Object {
+          "disabled": "var(--text-secondary)",
+          "primary": "var(--text-primary)",
+          "secondary": "var(--text-secondary)",
+        },
+      },
+      "typography": Object {
+        "font_default": "
+        font-family: var(--font-family-primary);
+        font-size: var(--base-font);
+        line-height: var(--line-height-normal);
+    ",
+        "font_h1": "
+        font-family: var(--font-family-primary);
+        font-size: var(--font-size-h1);
+        line-height: var(--line-height-h1);
+    ",
+        "font_h2": "
+        font-family: var(--font-family-primary);
+        font-size: var(--font-size-h2);
+        line-height: var(--line-height-h2);
+    ",
+        "font_h3": "
+        font-family: var(--font-family-primary);
+        font-size: var(--font-size-h3);
+        line-height: var(--line-height-h3);
+    ",
+        "font_h4": "
+        font-family: var(--font-family-primary);
+        font-size: var(--font-size-h4);
+        line-height: var(--line-height-h5);
+    ",
+        "font_link": "
+        font-family: var(--font-family-primary);
+        font-size: var(--font-size-link);
+        line-height: var(--line-height-link);
+    ",
+      },
+    }
+  }
+  type="button"
+/>
+`;

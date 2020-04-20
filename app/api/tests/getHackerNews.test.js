@@ -1,7 +1,7 @@
-import fetch from '../../../../utils/serviceUtil';
-import getMoreRows from '../api';
+import fetch from '../../utils/serviceUtil';
+import getHackerNews from '../getHackerNews';
 
-jest.mock('../../../../utils/serviceUtil');
+jest.mock('../../utils/serviceUtil');
 
 describe('test get more data functionality', () => {
   test('load more', async () => {
@@ -17,6 +17,6 @@ describe('test get more data functionality', () => {
     };
     // eslint-disable-next-line compat/compat
     fetch.mockImplementationOnce(() => Promise.resolve(data));
-    await expect(getMoreRows(0)).resolves.toEqual(data.data);
+    await expect(getHackerNews(0)).resolves.toEqual(data.data);
   });
 });

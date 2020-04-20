@@ -1,42 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import NewsListItem from '../NewsListItem';
-import { PAGE_TITLE } from '../../../constants';
+import styled from 'styled-components';
+import NewsItem from '../NewsListItem';
+import LoadMore from '../../molecules/LoadMore'
+import List from '../../atoms/List';
+import ListItem from '../../atoms/ListItem';
+import styles from './NewsList.style';
 
-const NewsList = ({newsListData, loadMoreNews, upVoteNewsItem, hideNewsItem}) => {
+const NewsList = ({newsListData, loadMoreNews, upVoteNewsItem, hideNewsItem, className}) => {
     return (
-        <>  
-            <h1 className="hidden">{PAGE_TITLE}</h1>
-            <ul>
-                {newsListData.map(listItem => (
-                    <NewsListItem 
-                        key={listItem.objectID} 
-                        newsItem={listItem} 
-                        hideNewsItem={hideNewsItem} 
-                        upVoteNewsItem={upVoteNewsItem} 
-                    />
-                ))}
-            </ul>
-            <a href="#" onClick={loadMoreNews} className="loadMore">Load More</a>
-            <style jsx>{`
-                .hidden {
-                    position: absolute;
-                    left: -999px;
-                    visibility: hidden;
-                }
-                .loadMore {
-                    text-align: center;
-                    display: block;
-                    margin-bottom: 50px;
-                }
-                @media only screen and (min-width: 1024px) {
-                    .loadMore {
-                        text-align: left;
-                        text-indent: 100px;
-                    }
-                }
-            `}</style>
-        </>
+        <div className={className}>
+            <List type="ol">
+                {newsListData.map(listItem => {
+                    if (!listItem.title || listItem.hidden) return null;
+                    return (
+                        <ListItem key={listItem.objectID} type="ol">
+                            <NewsItem 
+                                key={listItem.objectID} 
+                                newsItem={listItem} 
+                                hideNewsItem={hideNewsItem} 
+                                upVoteNewsItem={upVoteNewsItem}
+                                className="news-item-row"
+                            />
+                        </ListItem>
+                    )
+                })}
+            </List>
+            <LoadMore onClick={loadMoreNews}>Load More</LoadMore>
+        </div>
     );
 };
 
@@ -44,4 +35,8 @@ NewsList.propTypes = {
     newsListData: PropTypes.array,
 };
 
-export default NewsList;
+const StyledNewsList = styled(NewsList)`
+  ${styles};
+`;
+
+export default StyledNewsList;

@@ -1,0 +1,6 @@
+
+export default {
+    APPEND_ITEMS: 'APEND_ITEMS',
+    UPVOTE_ITEM: 'UPVOTE_ITEM',
+    HIDE_ITEM: 'HIDE_ITEM'
+}

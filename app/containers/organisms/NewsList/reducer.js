@@ -1,10 +1,8 @@
-export const APPEND_ITEMS = 'APEND_ITEMS';
-export const UPVOTE_ITEM = 'UPVOTE_ITEM';
-export const HIDE_ITEM = 'HIDE_ITEM';
+import actionConstants from './constants';
 
 export default (state, { type, payload }) => {
   switch (type) {
-    case UPVOTE_ITEM: {
+    case actionConstants.UPVOTE_ITEM: {
       const newsList = state.hits.map(newsItem => {
         if (newsItem.objectID === payload) {
           return {
@@ -17,7 +15,7 @@ export default (state, { type, payload }) => {
       return { ...state, hits: newsList };
     }
 
-    case HIDE_ITEM: {
+    case actionConstants.HIDE_ITEM: {
       const hits = state.hits.map(newsItem => {
         if (newsItem.objectID === payload) {
           return {
@@ -30,7 +28,7 @@ export default (state, { type, payload }) => {
       return { ...state, hits };
     }
 
-    case APPEND_ITEMS: {
+    case actionConstants.APPEND_ITEMS: {
       const mergedNewsItems = [...state.hits, ...payload.hits];
       return { ...state, hits: mergedNewsItems, pageDisplayed: payload.page };
     }

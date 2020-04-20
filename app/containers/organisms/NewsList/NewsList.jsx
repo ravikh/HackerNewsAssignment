@@ -1,28 +1,30 @@
 import React, { useReducer } from 'react';
-import reducer, {APPEND_ITEMS, UPVOTE_ITEM, HIDE_ITEM} from './reducer';
-import fetchNews from './api';
+import reducer from './reducer';
+import getHackernews from '../../../api';
+import {
+    upVote,
+    hideNews,
+    loadMore
+} from './actions';
 
 import NewsListComponent from '../../../components/organisms/NewsList';
 
 const NewsList = props => {
-    const [state, dispatch] = useReducer(reducer, 
-        { 
-            hits: props.newsListData.hits, 
-            pageDisplayed: props.newsListData.page
-        }
-    );
 
-    const upVoteNewsItem = (newsItem) => {
-        dispatch({ type: UPVOTE_ITEM, payload: newsItem.objectID });
+    const initial_state = { 
+        hits: props.newsListData.hits, 
+        pageDisplayed: props.newsListData.page
     }
     
-    const hideNewsItem = (newsItem) => {
-        dispatch({ type: HIDE_ITEM, payload: newsItem.objectID });
-    }
+    const [state, dispatch] = useReducer( reducer, initial_state );
+
+    const upVoteNewsItem = newsItem => upVote(dispatch, newsItem);
+    
+    const hideNewsItem = newsItem => hideNews(dispatch, newsItem);
     
     const loadMoreNews = async () => {
-        const moreData = await fetchNews(parseInt(state.pageDisplayed) + 1);
-        dispatch({ type: APPEND_ITEMS, payload: moreData });
+        const moreData = await getHackernews(parseInt(state.pageDisplayed) + 1);
+        loadMore(dispatch, moreData);
     }
 
     return (
