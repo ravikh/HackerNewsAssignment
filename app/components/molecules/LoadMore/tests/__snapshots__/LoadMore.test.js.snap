@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadMoreButton should render correctly 1`] = `
+<LoadMoreButton
+  className=""
+  onClick={[Function]}
+  theme={
+    Object {
+      "colors": Object {
+        "background": Object {
+          "default": "var(--primary-bg-color)",
+          "errorMessage": "var(--white)",
+          "header": "var(--primary-color)",
+        },
+        "common": Object {
+          "black": "var(--black)",
+          "blue": "var(--blue)",
+          "white": "var(--white)",
+        },
+        "error": Object {
+          "primary": "var(--red)",
+          "secondary": "var(--grey)",
+        },
+        "primary": Object {
+          "dark": "var(--black)",
+          "light": "var(--grey)",
+        },
+        "secondary": Object {
+          "dark": "var(--black)",
+          "light": "var(--grey)",
+        },
+        "text": Object {
+          "disabled": "var(--text-secondary)",
+          "primary": "var(--text-primary)",
+          "secondary": "var(--text-secondary)",
+        },
+      },
+      "deviceBreakpoints": Object {
+        "desktop": "(min-width: 2560px)",
+        "desktopL": "(min-width: 2560px)",
+        "laptop": "(min-width: 1280px)",
+        "laptopL": "(min-width: 1440px)",
+        "mobileL": "(min-width: 425px)",
+        "mobileM": "(min-width: 375px)",
+        "mobileS": "(min-width: 320px)",
+        "tabletL": "(min-width: 1024px)",
+        "tabletP": "(min-width: 768px)",
+      },
+      "size": Object {
+        "desktop": "2560px",
+        "laptop": "1280px",
+        "laptopL": "1440px",
+        "mobileL": "425px",
+        "mobileM": "375px",
+        "mobileS": "320px",
+        "tabletL": "1024px",
+        "tabletP": "768px",
+      },
+      "typography": Object {
+        "font_default": "
+        font-family: var(--font-family-primary);
+        font-size: var(--base-font);
+        line-height: var(--line-height-normal);
+    ",
+        "font_h1": "
+        font-family: var(--font-family-primary);
+        font-size: var(--font-size-h1);
+        line-height: var(--line-height-h1);
+    ",
+        "font_h2": "
+        font-family: var(--font-family-primary);
+        font-size: var(--font-size-h2);
+        line-height: var(--line-height-h2);
+    ",
+        "font_h3": "
+        font-family: var(--font-family-primary);
+        font-size: var(--font-size-h3);
+        line-height: var(--line-height-h3);
+    ",
+        "font_h4": "
+        font-family: var(--font-family-primary);
+        font-size: var(--font-size-h4);
+        line-height: var(--line-height-h5);
+    ",
+        "font_link": "
+        font-family: var(--font-family-primary);
+        font-size: var(--font-size-link);
+        line-height: var(--line-height-link);
+    ",
+      },
+    }
+  }
+/>
+`;
