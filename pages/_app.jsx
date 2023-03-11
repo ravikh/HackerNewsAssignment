@@ -34,7 +34,7 @@ export default class MyApp extends App {
                 
                 <style jsx global>{`
                     body {
-                        background-color: #fffaf2;
+                        background-color: #fff;
                         margin: 0;
                     }
                     ul {
